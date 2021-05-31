@@ -1,0 +1,25 @@
+{
+  "name": "node-learn",
+  "version": "1.0.0",
+  "description": "node.js 翻身之路",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "lint": "eslint lib --ext .js,.ts,",
+    "lint-fix": "eslint lib --ext .js,.ts --fix --cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mengbo-ji/node-learn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mengbo-ji/node-learn/issues"
+  },
+  "homepage": "https://github.com/mengbo-ji/node-learn#readme",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-rc": "^1.0.2"
+  }
+}
