@@ -4,8 +4,8 @@
   "description": "node.js 翻身之路",
   "main": ".eslintrc.js",
   "scripts": {
-    "lint": "eslint lib --ext .js,.ts,",
-    "lint-fix": "eslint lib --ext .js,.ts --fix --cache"
+    "lint": "eslint node-base --ext .js,.ts,",
+    "lint-fix": "eslint node-base --ext .js,.ts --fix --cache"
   },
   "repository": {
     "type": "git",
