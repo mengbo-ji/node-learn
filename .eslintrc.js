@@ -3,5 +3,7 @@ module.exports = {
   rules: {
     'require-jsdoc': [ 'off', {}],
     'valid-jsdoc': [ 'off', {}],
+    'node/prefer-promises/fs': [ 'off' ],
+    'no-bitwise': [ 'off' ],
   },
 };
