@@ -25,5 +25,8 @@
   },
   "git-pre-hooks": {
     "pre-commit": "npm run lint"
+  },
+  "dependencies": {
+    "through2": "^4.0.2"
   }
 }
