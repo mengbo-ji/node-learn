@@ -6,4 +6,3 @@ const z = zlib.createGzip();
 const wns = fs.createWriteStream('./test.txt.gz');
 
 rns.pipe(z).pipe(wns);
-
