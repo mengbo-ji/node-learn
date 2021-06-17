@@ -28,4 +28,5 @@ console.log(process.version);
 
 // execPath: 属性返回执行当前脚本的 Node 二进制文件的绝对路径
 console.log(process.execPath); // /Users/jimengbo/.nvm/versions/node/v12.18.3/bin/node
-
+console.log(process.arch);
+console.log(process.platform);

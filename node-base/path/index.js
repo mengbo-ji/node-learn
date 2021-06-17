@@ -7,3 +7,4 @@ console.log(appDirectory);
 
 console.log(path.resolve(appDirectory, 'a/index.js'));
 console.log(path.resolve('/foo/bar', 'tmp/file/'));
+console.log(path.basename(appDirectory));
