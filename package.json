@@ -27,6 +27,7 @@
     "pre-commit": "npm run lint"
   },
   "dependencies": {
+    "mime-types": "^2.1.31",
     "through2": "^4.0.2"
   }
 }

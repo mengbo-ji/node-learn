@@ -30,3 +30,8 @@ console.log(process.version);
 console.log(process.execPath); // /Users/jimengbo/.nvm/versions/node/v12.18.3/bin/node
 console.log(process.arch);
 console.log(process.platform);
+console.log(process.title);
+console.log(process.uptime());
+console.log(process.versions);
+console.log(process.versions.node);
+console.log(process.version);
