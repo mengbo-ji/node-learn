@@ -2,9 +2,9 @@
   "name": "node-learn",
   "version": "1.0.0",
   "description": "node.js 翻身之路",
-  "main": ".eslintrc.js",
+  "main": "node-base/Koa/index.js",
   "scripts": {
-    "test": "nodemon node-base/http/test/index.js",
+    "test": "nodemon --inspect node-base/Koa/index.js",
     "lint": "eslint node-base --ext .js",
     "lint-fix": "eslint node-base --ext .js --fix --cache"
   },
@@ -32,6 +32,7 @@
     "compressible": "^2.0.18",
     "etag": "^1.8.1",
     "handlebars": "^4.7.7",
+    "koa": "^2.13.1",
     "mime-types": "^2.1.31",
     "natural-compare": "^1.4.0",
     "through2": "^4.0.2"
