@@ -4,6 +4,7 @@
   "description": "node.js 翻身之路",
   "main": ".eslintrc.js",
   "scripts": {
+    "test": "nodemon node-base/http/test/index.js",
     "lint": "eslint node-base --ext .js",
     "lint-fix": "eslint node-base --ext .js --fix --cache"
   },
@@ -27,7 +28,12 @@
     "pre-commit": "npm run lint"
   },
   "dependencies": {
+    "accepts": "^1.3.7",
+    "compressible": "^2.0.18",
+    "etag": "^1.8.1",
+    "handlebars": "^4.7.7",
     "mime-types": "^2.1.31",
+    "natural-compare": "^1.4.0",
     "through2": "^4.0.2"
   }
 }
