@@ -25,4 +25,4 @@ function compose(middleware) {
   };
 }
 
-export default compose;
+module.exports = compose;
