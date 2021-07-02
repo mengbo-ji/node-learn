@@ -33,6 +33,7 @@
     "etag": "^1.8.1",
     "handlebars": "^4.7.7",
     "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
     "mime-types": "^2.1.31",
     "natural-compare": "^1.4.0",
     "through2": "^4.0.2"
