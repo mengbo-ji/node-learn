@@ -1,4 +1,4 @@
-const compose = require('./util');
+const { compose } = require('./util');
 
 const middleware = [];
 
