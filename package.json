@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/mengbo-ji/node-learn#readme",
   "devDependencies": {
-    "eslint": "^7.27.0",
+    "eslint": "^7.32.0",
     "eslint-config-rc": "^1.0.2",
     "git-pre-hooks": "^1.2.1"
   },
