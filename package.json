@@ -38,6 +38,7 @@
     "koa-static": "^5.0.0",
     "mime-types": "^2.1.31",
     "natural-compare": "^1.4.0",
+    "puppeteer": "^10.2.0",
     "through2": "^4.0.2"
   }
 }
