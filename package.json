@@ -37,6 +37,7 @@
     "koa-middlewares": "^6.0.0",
     "koa-router": "^10.0.0",
     "koa-static": "^5.0.0",
+    "logger": "^0.0.1",
     "mime-types": "^2.1.31",
     "natural-compare": "^1.4.0",
     "ora": "^5.4.1",
