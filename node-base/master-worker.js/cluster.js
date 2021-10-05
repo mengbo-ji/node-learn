@@ -21,7 +21,7 @@ if (cluster.isMaster) {
     cluster.fork();
   }
 
-  cluster.on('exit', function(worker, code, signal) {
+  cluster.on('exit', function(worker) {
     console.log('worker ' + worker.process.pid + ' died');
   });
 } else {
