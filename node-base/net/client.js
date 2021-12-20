@@ -1,14 +1,22 @@
 const net = require('net');
-const client = net.connect({ port: 8124 }, function() { // 'connect' listener
-  console.log('client connected');
-  client.write('world!\r\n');
+
+const client = net.createConnection({
+  port: 1234,
+  host: '127.0.0.1',
 });
 
-client.on('data', function(data) {
-  console.log(data.toString());
-  client.end();
+client.on('connect', () => {
+  client.write('客户端🔗了');
 });
 
-client.on('end', function() {
-  console.log('client disconnected');
+client.on('data', chunk => {
+  console.log('client', chunk.toString());
+});
+
+client.on('error', err => {
+  console.log(err);
+});
+
+client.on('close', () => {
+  console.log('客户端断开连接');
 });
