@@ -1,5 +1,5 @@
 const express = require('express');
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectID } = require('mongodb');
 
 const dbURL = 'mongodb://localhost:27017/';
 const dbClient = new MongoClient(dbURL);
@@ -83,16 +83,66 @@ app.get('/articles', async (req, res, next) => {
   }
 });
 
-app.get('/articles/:id', (req, res) => {
-  res.send('get-articles:id');
+app.get('/articles/:id', async (req, res, next) => {
+  try {
+    await dbClient.connect();
+    const articlesCollection = dbClient.db('test').collection('articles');
+
+    const article = await articlesCollection.findOne({
+      _id: ObjectID(req.params.id),
+    });
+
+    res
+      .status(200)
+      .json({
+        article,
+      });
+  } catch (error) {
+    next(error);
+  }
 });
 
-app.patch('/articles/:id', (req, res) => {
-  res.send('patch-articles:id');
+app.patch('/articles/:id', async (req, res, next) => {
+  try {
+    await dbClient.connect();
+    const articlesCollection = dbClient.db('test').collection('articles');
+
+    await articlesCollection.updateOne({
+      _id: ObjectID(req.params.id),
+    }, {
+      $set: req.body.article,
+    });
+
+    const article = await articlesCollection.findOne({
+      _id: ObjectID(req.params.id),
+    });
+
+    res
+      .status(200)
+      .json({
+        article,
+      });
+  } catch (error) {
+    next(error);
+  }
 });
 
-app.delete('/articles/:id', (req, res) => {
-  res.send('delete-articles:id');
+app.delete('/articles/:id', async (req, res, next) => {
+  try {
+    await dbClient.connect();
+    const articlesCollection = dbClient.db('test').collection('articles');
+    const ret = await articlesCollection.deleteOne({
+      _id: ObjectID(req.params.id),
+    });
+
+    res
+      .status(200)
+      .json({
+        data: ret,
+      });
+  } catch (error) {
+    next(error);
+  }
 });
 
 // 错误处理中间件
