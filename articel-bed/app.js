@@ -126,7 +126,7 @@ app.patch('/articles/:id', async (req, res, next) => {
     next(error);
   }
 });
-
+console.log('1');
 app.delete('/articles/:id', async (req, res, next) => {
   try {
     await dbClient.connect();
